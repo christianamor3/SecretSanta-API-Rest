@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <br>
+    <h1>EDITING NOT MATCHING PLAYER</h1>
+        <form th:action="@{/secretSanta/updateNotMatch/{id}(id=${playerFound.player_id})}" th:object="${playerFound}" method="post">
+            <label for="nombre">New Not Matching Player </label>
+                    <input type="text" class="form-control" id="nombre" th:field="*{notMatch}" placeholder="Write the new not matching player">
+                <br>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+</body>
+</html>

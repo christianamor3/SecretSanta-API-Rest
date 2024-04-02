@@ -81,6 +81,11 @@ public class SecretSantaServiceImpl implements SecretSantaService {
         }
     }
 
+    public Player findById(Long id){
+        Optional<Player> playerOptional = repo.findById(id);
+        return playerOptional.get();
+    }
+
     @Override
     public String play() {
         List<Player> playerList = repo.findAll();

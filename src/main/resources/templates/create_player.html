@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<br>
+    <h1 class="text-center">CREATE A PLAYER</h1>
+        <form th:action="@{/secretSanta/add}" th:object="${player}" method="POST">
+            <label>Name: </label>
+                <input type="text" th:field="*{player_name}" class="form-control" placeholder="Write the name of the player">
+            <br><br>
+            <label> Not Match: </label>
+                <input type="text" th:field="*{notMatch}" class="form-control" placeholder="Write the not matching player">
+            <br><br>
+                <button class="btn btn-success">Add</button>
+        </form>
+</body>
+</html>
