@@ -81,6 +81,16 @@ public class SecretSantaServiceImpl implements SecretSantaService {
         }
     }
 
+    public List<Player> findAllPlayers() {
+        List<Player> playerList = repo.findAll();
+
+        if (playerList.isEmpty()){
+            throw new EntityNotFoundException("No se han encontrado jugadores");
+        } else {
+            return playerList;
+        }
+    }
+
     public Player findById(Long id){
         Optional<Player> playerOptional = repo.findById(id);
         return playerOptional.get();

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>RESULTS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<br>
+<h1>RESULTS</h1>
+
+<table>
+    <tr>
+        <th> Player </th>
+        <th> Secret Santa </th>
+    </tr>
+
+    <tr th:each="player : ${players}">
+        <td th:text=${player.player_name}> Player Name</td>
+        <td th:text="${player.secretSanta}"> Secret Santa</td>
+    </tr>
+</table>
+
+</body>
+</html>

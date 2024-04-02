@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/secretSanta")
 public class WebSecretSantaController {
@@ -85,8 +87,17 @@ public class WebSecretSantaController {
         service.deleteById(id);
         return "redirect:/secretSanta";
     }
-    
-    
-    
-    
+
+    @GetMapping("/play")
+    public String playGame(Model modelo){
+        service.play();
+        List<Player> players = service.findAllPlayers();
+        modelo.addAttribute("players", players);
+        return "result";
+    }
+
+
+
+
+
 }
