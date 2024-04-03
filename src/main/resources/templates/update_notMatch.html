@@ -9,11 +9,13 @@
 <body>
     <br>
     <h1>EDITING NOT MATCHING PLAYER</h1>
+        <div class="container">
         <form th:action="@{/secretSanta/updateNotMatch/{id}(id=${playerFound.player_id})}" th:object="${playerFound}" method="post">
-            <label for="nombre">New Not Matching Player </label>
+            <label id="id1" for="nombre">New Not Matching Player </label>
                     <input type="text" class="form-control" id="nombre" th:field="*{notMatch}" placeholder="Write the new not matching player">
-                <br>
-            <button type="submit" class="btn btn-primary">Save</button>
+                <br><br>
+            <button type="submit" style="background-color:#FA4A3D; color:white; border-radius:5px">Save</button>
         </form>
+        </div>
 </body>
 </html>

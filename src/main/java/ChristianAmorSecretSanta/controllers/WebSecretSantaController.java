@@ -18,7 +18,6 @@ public class WebSecretSantaController {
 
     @GetMapping({"", "/"})
     public String listAllPlayers(Model modelo){
-        modelo.addAttribute("players", service.findAll());
         return "secretSanta";
     }
 

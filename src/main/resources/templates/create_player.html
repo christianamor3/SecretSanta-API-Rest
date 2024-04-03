@@ -8,14 +8,16 @@
 <body>
 <br>
     <h1 class="text-center">CREATE A PLAYER</h1>
-        <form th:action="@{/secretSanta/add}" th:object="${player}" method="POST">
-            <label>Name: </label>
+    <div class="container">
+    <form th:action="@{/secretSanta/add}" th:object="${player}" method="POST">
+            <label id="id1">Name: </label>
                 <input type="text" th:field="*{player_name}" class="form-control" placeholder="Write the name of the player">
             <br><br>
-            <label> Not Match: </label>
+            <label id="id1"> Not Match: </label>
                 <input type="text" th:field="*{notMatch}" class="form-control" placeholder="Write the not matching player">
             <br><br>
-                <button class="btn btn-success">Add</button>
+                <button style="background-color:#FA4A3D; color:white; border-radius:5px">Add</button>
         </form>
+    </div>
 </body>
 </html>

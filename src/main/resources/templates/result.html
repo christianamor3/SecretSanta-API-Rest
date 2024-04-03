@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>RESULTS</title>
+    <title>Result</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -10,13 +10,13 @@
 <br>
 <h1>RESULTS</h1>
 
-<table>
-    <tr>
-        <th> Player </th>
+<table style="background-color:black">
+    <tr style="background-color:lightblue">
+    <th> Player </th>
         <th> Secret Santa </th>
     </tr>
 
-    <tr th:each="player : ${players}">
+    <tr style="background-color:white" th:each="player : ${players}">
         <td th:text=${player.player_name}> Player Name</td>
         <td th:text="${player.secretSanta}"> Secret Santa</td>
     </tr>
